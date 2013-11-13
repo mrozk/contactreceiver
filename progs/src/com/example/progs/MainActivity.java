@@ -151,18 +151,10 @@ public class MainActivity extends Activity {
 			{
 				myF.createNewFile();
 			}
-	        try 
-	        {
-	            FileWriter fWr = new FileWriter(myF);                   
-	            fWr.write( strToSave );
-	            fWr.flush();
-	            fWr.close();      
-	         }
-	         catch (Throwable t) 
-	         {
-	            //Toast.makeText(getApplicationContext(), "Exception: " + t.toString(), Toast.LENGTH_LONG).show();
-	         }
-
+	        FileWriter fWr = new FileWriter(myF);                   
+	        fWr.write( strToSave );
+	        fWr.flush();
+	        fWr.close();      
 	    }
 	    catch (Exception e1) 
 	    {
